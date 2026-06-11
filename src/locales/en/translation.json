@@ -1,0 +1,301 @@
+{
+    "common": {
+        "language": {
+            "en": "English",
+            "ar": "Arabic"
+        },
+        "previousImage": "Previous image",
+        "nextImage": "Next image",
+        "goToImage": "Go to image {{index}}",
+        "screenshot": "screenshot",
+        "scrollToTop": "Scroll to top"
+    },
+    "navbar": {
+        "links": {
+            "home": "Home",
+            "skills": "Skills",
+            "projects": "Projects",
+            "education": "Education",
+            "contact": "Contact"
+        },
+        "navigation": "Navigation",
+        "language": "Language",
+        "readyTitle": "Ready to build?",
+        "readyText": "Open Contact section and send your project details."
+    },
+    "hero": {
+        "name": {
+            "first": "Mohammed",
+            "last": "Ghandor"
+        },
+        "role": {
+            "flutter": "Flutter Developer",
+            "engineer": "Software Engineer"
+        },
+        "bio": {
+            "educationPrefix": "Fourth-year",
+            "educationHighlight": "Software Engineering (Informatics Engineering)",
+            "educationSuffix": "student at Latakia University (formerly Tishreen University).",
+            "rankPrefix": "Ranked",
+            "rankHighlight": "Top 10",
+            "rankMiddle": "in the ICPC programming contest at Latakia University. Solved",
+            "rankSolved": "400+",
+            "rankSuffix": "competitive programming problems across various difficulty levels.",
+            "experiencePrefix": "Experienced in building",
+            "experienceHighlight": "scalable mobile applications",
+            "experienceSuffix": "using Flutter with RESTful APIs in collaboration with backend teams."
+        },
+        "cta": {
+            "work": "View My Work",
+            "contact": "Get In Touch"
+        }
+    },
+    "skills": {
+        "title": "Technical Skills",
+        "subtitle": "Technologies, tools, and key highlights",
+        "items": {
+            "leader": {
+                "title": "Team Leader",
+                "tags": ["Backend Collaboration"]
+            },
+            "mobile": {
+                "title": "Mobile Development",
+                "tags": [
+                    "Flutter",
+                    "Dart",
+                    "Notifications",
+                    "Third-Party 'Firebase'"
+                ]
+            },
+            "state": {
+                "title": "State Management",
+                "tags": ["BLoC", "GetX"]
+            },
+            "backend": {
+                "title": "Backend Integration",
+                "tags": ["RESTful APIs", "Team Collaboration"]
+            },
+            "architecture": {
+                "title": "Architecture & UI",
+                "tags": ["Responsive UI", "Clean Architecture"]
+            },
+            "version": {
+                "title": "Version Control",
+                "tags": ["Git", "GitHub"]
+            },
+            "problemSolving": {
+                "title": "Problem Solving +400",
+                "tags": [
+                    "Algorithms",
+                    "Data Structures",
+                    "Competitive Programming"
+                ]
+            }
+        }
+    },
+    "projects": {
+        "title": "Featured Projects",
+        "subtitle": "Real-world applications built with Flutter",
+        "otherTitle": "Other Projects",
+        "labels": {
+            "customerApp": "Customer App",
+            "systemApp": "System App"
+        },
+        "main": [
+            {
+                "id": "starliga",
+                "title": "Star Liga",
+                "subtitle": "Sports League Management Platform",
+                "badge": "Completed",
+                "description": "A complete sports league management platform built with Flutter and Clean Architecture. Features tournament management, live match tracking, team and player rankings with detailed statistics, team registration workflows with logo upload and player management. Integrated Firebase Cloud Messaging for real-time notifications with full Arabic RTL support.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "BLoC",
+                    "Clean Architecture",
+                    "Dio",
+                    "REST APIs",
+                    "Firebase FCM"
+                ],
+                "images": [
+                    "/assets/starLiga1.png",
+                    "/assets/starLiga2.png",
+                    "/assets/starLiga3.png",
+                    "/assets/starLiga4.png"
+                ]
+            },
+            {
+                "id": "yassen",
+                "title": "YASSEN",
+                "subtitle": "Mosque Management System",
+                "badge": "Completed",
+                "description": "Built using Flutter with GetX state management and integrated with RESTful APIs. Multi-role system (Admin & Supervisors) with permission control. Features include student management, group assignment, attendance tracking, grading system, and a fully isolated seasonal system. Fully responsive UI.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "GetX",
+                    "RESTful APIs",
+                    "Responsive UI"
+                ],
+                "images": [
+                    "/assets/yassen1.webp",
+                    "/assets/yassen2.webp",
+                    "/assets/yassen3.webp",
+                    "/assets/yassen4.webp"
+                ]
+            },
+            {
+                "id": "fodz",
+                "title": "FODZ",
+                "subtitle": "Food Delivery System",
+                "badge": "Published on Google Play",
+                "description": "Developed using Flutter with BLoC state management and RESTful APIs in collaboration with a backend team. Includes Admin dashboard, Restaurant dashboard, Driver app, and Customer app. Features: restaurant browsing, ordering, real-time tracking, favorites, map location selection, and Firebase push notifications. Fully responsive UI.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "BLoC",
+                    "RESTful APIs",
+                    "Firebase FCM",
+                    "Google Maps"
+                ],
+                "images": [
+                    "/assets/FODZ1.webp",
+                    "/assets/FODZ2.webp",
+                    "/assets/FODZ3.webp",
+                    "/assets/FODZ4.webp"
+                ]
+            },
+            {
+                "id": "forty",
+                "title": "FORTY",
+                "subtitle": "Supermarket Delivery System",
+                "badge": "Completed",
+                "description": "Developed using Flutter with BLoC state management and RESTful APIs in collaboration with backend team. Consists of two main systems: Customer App and System App (Admin, Cashier, Driver accounts).",
+                "features": {
+                    "Customer App": [
+                        "Ordering",
+                        "Discounts",
+                        "Categories",
+                        "Offers",
+                        "Loyalty Points"
+                    ],
+                    "Admin": [
+                        "Manage Products",
+                        "Manage Offers",
+                        "Manage Orders",
+                        "Cash Register",
+                        "Manage Drivers & Cashiers"
+                    ],
+                    "Cashier": [
+                        "Approve Orders",
+                        "Assign Drivers",
+                        "Driver Settlements"
+                    ],
+                    "Driver": [
+                        "Manage Deliveries",
+                        "Request Withdrawals",
+                        "Return Payments"
+                    ]
+                },
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "BLoC",
+                    "RESTful APIs",
+                    "Firebase FCM"
+                ],
+                "customerImages": [
+                    "/assets/forty1.webp",
+                    "/assets/forty2.webp",
+                    "/assets/forty3.webp",
+                    "/assets/forty4.webp"
+                ],
+                "dashboardImages": [
+                    "/assets/fortyDash1.webp",
+                    "/assets/fortyDash2.webp",
+                    "/assets/fortyDash3.webp",
+                    "/assets/fortyDash4.webp"
+                ]
+            },
+            {
+                "id": "tree",
+                "title": "Tree",
+                "subtitle": "Marketplace Ecosystem Platform",
+                "badge": "In Development",
+                "description": "A large-scale marketplace ecosystem built with Flutter using Clean Architecture and BLoC state management. Features dual-platform architecture for merchants and customers with authentication, shopping cart, favorites, order tracking, and address management. Includes advanced marketplace features like combo offers, group purchases, and promotional feeds. Integrated Firebase Cloud Messaging for real-time notifications with multilingual support (Arabic & English) and full RTL/LTR localization. Designed with an advanced theme engine supporting multiple custom themes, runtime switching, and system-aware appearance detection. Built with scalable architecture using Dependency Injection, Repository Pattern, and 30+ Cubits.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "BLoC",
+                    "Clean Architecture",
+                    "Firebase",
+                    "Dio",
+                    "REST APIs",
+                    "GetIt",
+                    "SharedPreferences"
+                ],
+                "images": []
+            }
+        ],
+        "small": [
+            {
+                "id": "wherewhen",
+                "title": "WhereWhen",
+                "subtitle": "Chat App",
+                "features": ["Email authentication", "Real-time chat"],
+                "icon": "💬"
+            },
+            {
+                "id": "firenots",
+                "title": "FireNots",
+                "subtitle": "Notes App",
+                "features": ["Category-based notes", "User-specific storage"],
+                "icon": "📝"
+            },
+            {
+                "id": "weatherya",
+                "title": "Weatherya",
+                "subtitle": "Weather App",
+                "features": [
+                    "Automatic city detection",
+                    "Rain probability display"
+                ],
+                "icon": "🌤"
+            }
+        ]
+    },
+    "education": {
+        "title": "Education & Languages",
+        "subtitle": "Academic background and language proficiency",
+        "degreeTitle": "Bachelor of Informatics Engineering",
+        "degreeSpecialization": "Software Engineering Specialization",
+        "university": "Latakia University",
+        "universityFormerly": "(formerly Tishreen University)",
+        "year": "4th Year Student",
+        "languagesTitle": "Languages",
+        "arabic": "Arabic",
+        "arabicLevel": "Native",
+        "english": "English",
+        "englishLevel": "Very Good (Technical)"
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "subtitle": "Let's discuss your next project or opportunity",
+        "mailSubject": "Portfolio Contact",
+        "sendEmail": "Send Email",
+        "openGmail": "Open Gmail",
+        "callNow": "Call Now",
+        "quickTitle": "Open for collaborations",
+        "quickText": "I usually reply within 24 hours. For the fastest response, send an email.",
+        "labels": {
+            "email": "Email",
+            "phone": "Phone",
+            "location": "Location"
+        },
+        "values": {
+            "email": "mohammed.ghandor23@gmail.com",
+            "phone": "+963 980 895 956",
+            "location": "Latakia, Syria"
+        }
+    }
+}

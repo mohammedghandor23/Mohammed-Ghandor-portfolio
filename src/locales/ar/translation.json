@@ -1,0 +1,292 @@
+{
+    "common": {
+        "language": {
+            "en": "الإنكليزية",
+            "ar": "العربية"
+        },
+        "previousImage": "الصورة السابقة",
+        "nextImage": "الصورة التالية",
+        "goToImage": "الانتقال إلى الصورة {{index}}",
+        "screenshot": "لقطة",
+        "scrollToTop": "العودة للأعلى"
+    },
+    "navbar": {
+        "links": {
+            "home": "الرئيسية",
+            "skills": "المهارات",
+            "projects": "المشاريع",
+            "education": "التعليم",
+            "contact": "التواصل"
+        },
+        "navigation": "التنقل",
+        "language": "اللغة",
+        "readyTitle": "جاهز للبدء؟",
+        "readyText": "افتح قسم التواصل وأرسل تفاصيل مشروعك."
+    },
+    "hero": {
+        "name": {
+            "first": "محمد",
+            "last": "غندور"
+        },
+        "role": {
+            "flutter": "مطوّر Flutter",
+            "engineer": "مهندس برمجيات"
+        },
+        "bio": {
+            "educationPrefix": "طالب في السنة الرابعة بتخصص",
+            "educationHighlight": "هندسة البرمجيات (الهندسة المعلوماتية)",
+            "educationSuffix": "في جامعة اللاذقية (سابقًا جامعة تشرين).",
+            "rankPrefix": "حصلت على",
+            "rankHighlight": "المركز العاشر",
+            "rankMiddle": "في مسابقة ICPC بجامعة اللاذقية. قمت بحل",
+            "rankSolved": "400+",
+            "rankSuffix": "مسألة برمجة تنافسية بمستويات صعوبة مختلفة.",
+            "experiencePrefix": "أمتلك خبرة في بناء",
+            "experienceHighlight": "تطبيقات Flutter قابلة للتوسع",
+            "experienceSuffix": "باستخدام RESTful APIs وبالتعاون مع فرق الـ Backend."
+        },
+        "cta": {
+            "work": "شاهد أعمالي",
+            "contact": "تواصل معي"
+        }
+    },
+    "skills": {
+        "title": "المهارات التقنية",
+        "subtitle": "التقنيات والأدوات وأبرز النقاط",
+        "items": {
+            "leader": {
+                "title": "قائد فريق",
+                "tags": ["تعاون مع فريق Backend"]
+            },
+            "mobile": {
+                "title": "تطوير تطبيقات الموبايل",
+                "tags": ["Flutter", "Dart", "الإشعارات", "طرف ثالث 'Firebase'"]
+            },
+            "state": {
+                "title": "إدارة الحالة",
+                "tags": ["BLoC", "GetX"]
+            },
+            "backend": {
+                "title": "تكامل Backend",
+                "tags": ["RESTful APIs", "تعاون ضمن الفريق"]
+            },
+            "architecture": {
+                "title": "الهيكلية وواجهة المستخدم",
+                "tags": ["واجهة متجاوبة", "Clean Architecture"]
+            },
+            "version": {
+                "title": "التحكم بالإصدارات",
+                "tags": ["Git", "GitHub"]
+            },
+            "problemSolving": {
+                "title": "حل المشكلات +400",
+                "tags": ["الخوارزميات", "هياكل البيانات", "البرمجة التنافسية"]
+            }
+        }
+    },
+    "projects": {
+        "title": "المشاريع المميزة",
+        "subtitle": "تطبيقات واقعية مبنية باستخدام Flutter",
+        "otherTitle": "مشاريع أخرى",
+        "labels": {
+            "customerApp": "تطبيق العميل",
+            "systemApp": "تطبيق النظام"
+        },
+        "main": [
+            {
+                "id": "starliga",
+                "title": "Star Liga",
+                "subtitle": "منصة إدارة الدوريات الرياضية",
+                "badge": "مكتمل",
+                "description": "منصة متكاملة لإدارة الدوريات الرياضية مبنية باستخدام Flutter ومبادئ Clean Architecture. تتضمن إدارة البطولات وتتبع المباريات المباشرة، تصنيف الفرق واللاعبين مع إحصائيات مفصلة، ومسارات تسجيل الفرق مع رفع الشعارات وإدارة اللاعبين. تكامل Firebase Cloud Messaging للإشعارات الفورية مع دعم كامل للغة العربية RTL.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "BLoC",
+                    "Clean Architecture",
+                    "Dio",
+                    "REST APIs",
+                    "Firebase FCM"
+                ],
+                "images": [
+                    "/assets/starLiga1.png",
+                    "/assets/starLiga2.png",
+                    "/assets/starLiga3.png",
+                    "/assets/starLiga4.png"
+                ]
+            },
+            {
+                "id": "yassen",
+                "title": "YASSEN",
+                "subtitle": "نظام إدارة المساجد",
+                "badge": "مكتمل",
+                "description": "تم تطويره باستخدام Flutter مع GetX لإدارة الحالة والتكامل مع RESTful APIs. نظام متعدد الأدوار (إدارة ومشرفون) مع صلاحيات دقيقة. يتضمن إدارة الطلاب، توزيع المجموعات، تتبع الحضور، نظام التقييم، ونظام مواسم معزول بالكامل. واجهة متجاوبة بالكامل.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "GetX",
+                    "RESTful APIs",
+                    "واجهة متجاوبة"
+                ],
+                "images": [
+                    "/assets/yassen1.webp",
+                    "/assets/yassen2.webp",
+                    "/assets/yassen3.webp",
+                    "/assets/yassen4.webp"
+                ]
+            },
+            {
+                "id": "fodz",
+                "title": "FODZ",
+                "subtitle": "نظام توصيل الطعام",
+                "badge": "منشور على Google Play",
+                "description": "تم تطويره باستخدام Flutter مع BLoC لإدارة الحالة وRESTful APIs بالتعاون مع فريق Backend. يشمل لوحة تحكم الإدارة، لوحة المطاعم، تطبيق السائق، وتطبيق العميل. الميزات: تصفح المطاعم، الطلب، التتبع اللحظي، المفضلة، اختيار الموقع على الخريطة، وإشعارات Firebase. واجهة متجاوبة بالكامل.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "BLoC",
+                    "RESTful APIs",
+                    "Firebase FCM",
+                    "Google Maps"
+                ],
+                "images": [
+                    "/assets/FODZ1.webp",
+                    "/assets/FODZ2.webp",
+                    "/assets/FODZ3.webp",
+                    "/assets/FODZ4.webp"
+                ]
+            },
+            {
+                "id": "forty",
+                "title": "FORTY",
+                "subtitle": "نظام توصيل سوبرماركت",
+                "badge": "مكتمل",
+                "description": "تم تطويره باستخدام Flutter مع BLoC والتكامل مع RESTful APIs بالتعاون مع فريق Backend. يتكون من نظامين رئيسيين: تطبيق العميل وتطبيق النظام (إدارة، كاشير، سائق).",
+                "features": {
+                    "تطبيق العميل": [
+                        "الطلبات",
+                        "الخصومات",
+                        "الأقسام",
+                        "العروض",
+                        "نقاط الولاء"
+                    ],
+                    "الإدارة": [
+                        "إدارة المنتجات",
+                        "إدارة العروض",
+                        "إدارة الطلبات",
+                        "الصندوق",
+                        "إدارة السائقين والكاشير"
+                    ],
+                    "الكاشير": [
+                        "اعتماد الطلبات",
+                        "تعيين السائقين",
+                        "تسويات السائقين"
+                    ],
+                    "السائق": [
+                        "إدارة التوصيل",
+                        "طلبات السحب",
+                        "إرجاع المدفوعات"
+                    ]
+                },
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "BLoC",
+                    "RESTful APIs",
+                    "Firebase FCM"
+                ],
+                "customerImages": [
+                    "/assets/forty1.webp",
+                    "/assets/forty2.webp",
+                    "/assets/forty3.webp",
+                    "/assets/forty4.webp"
+                ],
+                "dashboardImages": [
+                    "/assets/fortyDash1.webp",
+                    "/assets/fortyDash2.webp",
+                    "/assets/fortyDash3.webp",
+                    "/assets/fortyDash4.webp"
+                ]
+            },
+            {
+                "id": "tree",
+                "title": "Tree",
+                "subtitle": "منصة نظام بيئة السوق التجارية",
+                "badge": "قيد التطوير",
+                "description": "نظام بيئة سوق تجاري واسع النطاق مبني باستخدام Flutter مع Clean Architecture و BLoC لإدارة الحالة. يتميز بهيكلية منصة مزدوجة للتجار والعملاء مع نظام المصادقة وعربة التسوق والمفضلة وتتبع الطلبات وإدارة العناوين. يتضمن ميزات سوق متقدمة مثل العروض المجمعة والمشتريات الجماعية والتغذيات الترويجية. تكامل Firebase Cloud Messaging للإشعارات الفورية مع دعم متعدد اللغات (العربية والإنجليزية) وتوطين كامل RTL/LTR. تم تصميمه بمحرك ثيمات متقدم يدعم ثيمات مخصصة متعددة والتبديل في وقت التشغيل والكشف عن مظهر النظام. مبني بهيكلية قابلة للتوسع باستخدام Dependency Injection ونمط Repository و 30+ Cubit.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "BLoC",
+                    "Clean Architecture",
+                    "Firebase",
+                    "Dio",
+                    "REST APIs",
+                    "GetIt",
+                    "SharedPreferences"
+                ],
+                "images": []
+            }
+        ],
+        "small": [
+            {
+                "id": "wherewhen",
+                "title": "WhereWhen",
+                "subtitle": "تطبيق محادثة",
+                "features": [
+                    "تسجيل دخول عبر البريد الإلكتروني",
+                    "محادثة فورية"
+                ],
+                "icon": "💬"
+            },
+            {
+                "id": "firenots",
+                "title": "FireNots",
+                "subtitle": "تطبيق ملاحظات",
+                "features": ["ملاحظات حسب التصنيف", "تخزين خاص لكل مستخدم"],
+                "icon": "📝"
+            },
+            {
+                "id": "weatherya",
+                "title": "Weatherya",
+                "subtitle": "تطبيق طقس",
+                "features": ["تحديد المدينة تلقائيًا", "عرض احتمالية المطر"],
+                "icon": "🌤"
+            }
+        ]
+    },
+    "education": {
+        "title": "التعليم واللغات",
+        "subtitle": "الخلفية الأكاديمية ومستوى اللغات",
+        "degreeTitle": "بكالوريوس الهندسة المعلوماتية",
+        "degreeSpecialization": "اختصاص هندسة البرمجيات",
+        "university": "جامعة اللاذقية",
+        "universityFormerly": "(سابقًا جامعة تشرين)",
+        "year": "طالب سنة رابعة",
+        "languagesTitle": "اللغات",
+        "arabic": "العربية",
+        "arabicLevel": "اللغة الأم",
+        "english": "الإنجليزية",
+        "englishLevel": "جيد جدًا (تقني)"
+    },
+    "contact": {
+        "title": "تواصل معي",
+        "subtitle": "دعنا نتحدث عن مشروعك القادم أو فرصة عمل",
+        "mailSubject": "تواصل عبر الموقع الشخصي",
+        "sendEmail": "إرسال بريد",
+        "openGmail": "فتح Gmail",
+        "callNow": "اتصال الآن",
+        "quickTitle": "متاح للتعاون",
+        "quickText": "عادةً أرد خلال 24 ساعة. لأسرع رد، أرسل رسالة عبر البريد الإلكتروني.",
+        "labels": {
+            "email": "البريد الإلكتروني",
+            "phone": "الهاتف",
+            "location": "الموقع"
+        },
+        "values": {
+            "email": "mohammed.ghandor23@gmail.com",
+            "phone": "+963 980 895 956",
+            "location": "اللاذقية، سوريا"
+        }
+    }
+}
