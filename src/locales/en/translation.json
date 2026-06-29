@@ -15,6 +15,7 @@
             "home": "Home",
             "skills": "Skills",
             "projects": "Projects",
+            "opensource": "Open Source",
             "education": "Education",
             "contact": "Contact"
         },
@@ -261,6 +262,56 @@
                     "Rain probability display"
                 ],
                 "icon": "🌤"
+            }
+        ]
+    },
+    "opensource": {
+        "title": "Open Source",
+        "subtitle": "Contributions to the developer community",
+        "github": "View on GitHub",
+        "pub": "View on pub.dev",
+        "items": [
+            {
+                "id": "drag_wave_slider",
+                "title": "drag_wave_slider",
+                "subtitle": "Flutter Package",
+                "badge": "Published on pub.dev",
+                "description": "A customizable drag slider with beautiful wave animation effect for Flutter apps. Perfect for slide-to-action interactions with animated wave trails. Features live progress tracking with onSlideChange callback, resetOnComplete option to keep thumb at end, and animated wave trails during drag motion.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "Custom Animations"
+                ],
+                "pubLink": "https://pub.dev/packages/drag_wave_slider",
+                "githubLink": null,
+                "images": [
+                    "/assets/ltr_example.gif",
+                    "/assets/ltr_example.png",
+                    "/assets/rtl_example.png"
+                ]
+            },
+            {
+                "id": "podwave",
+                "title": "PodWave",
+                "subtitle": "Offline Music Player",
+                "badge": "Open Source",
+                "description": "Offline music player app built with Flutter. Features offline music playback, multi-format support (MP3, AAC/M4A, WAV, OGG), queue management, library organization, folder navigation, bilingual support (Arabic & English), responsive design, and playback position memory. Built with feature-first Clean Architecture pattern using flutter_riverpod, go_router, hive, and just_audio.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "flutter_riverpod",
+                    "go_router",
+                    "hive",
+                    "just_audio"
+                ],
+                "githubLink": "https://github.com/mohammedghandor23/PodWave",
+                "pubLink": null,
+                "images": [
+                    "/assets/PodWave1.jpg",
+                    "/assets/PodWave2.jpg",
+                    "/assets/PodWave3.jpg",
+                    "/assets/PodWave4.jpg"
+                ]
             }
         ]
     },

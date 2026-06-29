@@ -15,6 +15,7 @@
             "home": "الرئيسية",
             "skills": "المهارات",
             "projects": "المشاريع",
+            "opensource": "مفتوح المصدر",
             "education": "التعليم",
             "contact": "التواصل"
         },
@@ -252,6 +253,56 @@
                 "subtitle": "تطبيق طقس",
                 "features": ["تحديد المدينة تلقائيًا", "عرض احتمالية المطر"],
                 "icon": "🌤"
+            }
+        ]
+    },
+    "opensource": {
+        "title": "مفتوح المصدر",
+        "subtitle": "مساهمات في مجتمع المطورين",
+        "github": "عرض على GitHub",
+        "pub": "عرض على pub.dev",
+        "items": [
+            {
+                "id": "drag_wave_slider",
+                "title": "drag_wave_slider",
+                "subtitle": "حزمة Flutter",
+                "badge": "منشور على pub.dev",
+                "description": "شريط سحب قابل للتخصيص مع تأثير موجة جميل لتطبيقات Flutter. مثالي لتفاعلات السحب للإجراء مع مسارات موجة متحركة. يتضمن تتبع التقدم المباشر مع استدعاء onSlideChange، خيار resetOnComplete لإبقاء المؤشر في النهاية، ومسارات موجة متحركة أثناء السحب.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "رسوم متحركة مخصصة"
+                ],
+                "pubLink": "https://pub.dev/packages/drag_wave_slider",
+                "githubLink": null,
+                "images": [
+                    "/assets/ltr_example.gif",
+                    "/assets/ltr_example.png",
+                    "/assets/rtl_example.png"
+                ]
+            },
+            {
+                "id": "podwave",
+                "title": "PodWave",
+                "subtitle": "مشغل موسيقى بدون إنترنت",
+                "badge": "مفتوح المصدر",
+                "description": "تطبيق مشغل موسيقى بدون إنترنت مبني باستخدام Flutter. يتضمن تشغيل الموسيقى بدون اتصال، دعم صيغ متعددة (MP3، AAC/M4A، WAV، OGG)، إدارة قائمة الانتظار، تنظيم المكتبة، التنقل عبر المجلدات، دعم ثنائي اللغة (العربية والإنجليزية)، تصميم متجاوب، وحفظ موقع التشغيل. مبني بنمط Clean Architecture باستخدام flutter_riverpod و go_router و hive و just_audio.",
+                "tech": [
+                    "Flutter",
+                    "Dart",
+                    "flutter_riverpod",
+                    "go_router",
+                    "hive",
+                    "just_audio"
+                ],
+                "githubLink": "https://github.com/mohammedghandor23/PodWave",
+                "pubLink": null,
+                "images": [
+                    "/assets/PodWave1.jpg",
+                    "/assets/PodWave2.jpg",
+                    "/assets/PodWave3.jpg",
+                    "/assets/PodWave4.jpg"
+                ]
             }
         ]
     },

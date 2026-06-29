@@ -13,6 +13,7 @@ const navLinks = [
     { key: "home", href: "#home" },
     { key: "skills", href: "#skills" },
     { key: "projects", href: "#projects" },
+    { key: "opensource", href: "#opensource" },
     { key: "education", href: "#education" },
     { key: "contact", href: "#contact" },
 ];

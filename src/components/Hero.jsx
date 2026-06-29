@@ -80,7 +80,7 @@ export default function Hero() {
 
                 <div className="hero-reveal [animation-delay:180ms] w-full lg:flex-1 flex justify-center lg:justify-end">
                     <img
-                        src="/assets/me.webp"
+                        src="/assets/me.png"
                         alt={`${t("hero.name.first")} ${t("hero.name.last")}`}
                         width={720}
                         height={1280}
