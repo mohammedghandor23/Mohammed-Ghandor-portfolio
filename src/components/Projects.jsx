@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Smartphone, Monitor } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import ImageSlider from "./ImageSlider";
+import TiltCard from "./fx/TiltCard";
 
 function ProjectCard({ project, index, reversed, t }) {
     const isForty = project.id === "forty";
@@ -13,7 +14,10 @@ function ProjectCard({ project, index, reversed, t }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="glass-card p-6 md:p-8 lg:p-10"
+        >
+        <TiltCard
+            tiltMax={0}
+            className="glass-card gradient-border p-6 md:p-8 lg:p-10"
         >
             <div
                 className={`flex flex-col ${
@@ -70,7 +74,7 @@ function ProjectCard({ project, index, reversed, t }) {
                         {project.tech.map((tech) => (
                             <span
                                 key={tech}
-                                className="px-3 py-1.5 text-xs font-medium text-text-secondary bg-white/5 rounded-lg border border-white/5"
+                                className="px-3 py-1.5 text-xs font-medium text-text-secondary bg-white/5 rounded-lg border border-white/5 transition-colors duration-300 hover:text-white hover:border-accent-purple/40 hover:bg-accent-purple/10"
                             >
                                 {tech}
                             </span>
@@ -123,6 +127,7 @@ function ProjectCard({ project, index, reversed, t }) {
                     )}
                 </div>
             </div>
+        </TiltCard>
         </motion.div>
     );
 }
@@ -177,28 +182,35 @@ export default function Projects() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-60px" }}
                                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                                className="glass-card glass-card-hover p-6"
+                                className="h-full"
                             >
-                                <div className="text-3xl mb-4">{project.icon}</div>
-                                <h4 className="text-lg font-bold text-white mb-1">
-                                    {project.title}
-                                </h4>
-                                <p className="text-text-muted text-sm mb-4">
-                                    {project.subtitle}
-                                </p>
-                                <ul className="space-y-2">
-                                    {project.features.map((f) => (
-                                        <li
-                                            key={f}
-                                            className="text-text-secondary text-sm flex items-start gap-2"
-                                        >
-                                            <span className="text-accent-purple mt-1 text-xs">
-                                                ▸
-                                            </span>
-                                            {f}
-                                        </li>
-                                    ))}
-                                </ul>
+                                <TiltCard
+                                    tiltMax={7}
+                                    className="glass-card gradient-border p-6 h-full group"
+                                >
+                                    <div className="text-3xl mb-4 inline-block transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
+                                        {project.icon}
+                                    </div>
+                                    <h4 className="text-lg font-bold text-white mb-1">
+                                        {project.title}
+                                    </h4>
+                                    <p className="text-text-muted text-sm mb-4">
+                                        {project.subtitle}
+                                    </p>
+                                    <ul className="space-y-2">
+                                        {project.features.map((f) => (
+                                            <li
+                                                key={f}
+                                                className="text-text-secondary text-sm flex items-start gap-2"
+                                            >
+                                                <span className="text-accent-purple mt-1 text-xs">
+                                                    ▸
+                                                </span>
+                                                {f}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </TiltCard>
                             </motion.div>
                         ))}
                     </div>

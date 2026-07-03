@@ -10,6 +10,7 @@ import {
     Users,
 } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import TiltCard from "./fx/TiltCard";
 
 const skillCategories = [
     {
@@ -73,28 +74,33 @@ export default function Skills() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-60px" }}
                                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                                className="glass-card glass-card-hover p-6 group"
+                                className="h-full"
                             >
-                                <div
-                                    className={`w-11 h-11 rounded-xl bg-gradient-to-br ${cat.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}
+                                <TiltCard
+                                    tiltMax={7}
+                                    className="glass-card gradient-border p-6 group h-full"
                                 >
-                                    <cat.icon size={20} className="text-white" />
-                                </div>
+                                    <div
+                                        className={`w-11 h-11 rounded-xl bg-gradient-to-br ${cat.color} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 group-hover:shadow-[0_0_24px_rgba(124,58,237,0.35)] transition-all duration-300`}
+                                    >
+                                        <cat.icon size={20} className="text-white" />
+                                    </div>
 
-                                <h3 className="text-white font-semibold text-base mb-3">
-                                    {t(`skills.items.${cat.id}.title`)}
-                                </h3>
+                                    <h3 className="text-white font-semibold text-base mb-3">
+                                        {t(`skills.items.${cat.id}.title`)}
+                                    </h3>
 
-                                <div className="flex flex-wrap gap-2">
-                                    {tags.map((skill) => (
-                                        <span
-                                            key={skill}
-                                            className="px-3 py-1.5 text-xs font-medium text-text-secondary bg-white/5 rounded-lg border border-white/5"
-                                        >
-                                            {skill}
-                                        </span>
-                                    ))}
-                                </div>
+                                    <div className="flex flex-wrap gap-2">
+                                        {tags.map((skill) => (
+                                            <span
+                                                key={skill}
+                                                className="px-3 py-1.5 text-xs font-medium text-text-secondary bg-white/5 rounded-lg border border-white/5 transition-colors duration-300 hover:text-white hover:border-accent-purple/40 hover:bg-accent-purple/10"
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </TiltCard>
                             </motion.div>
                         );
                     })}

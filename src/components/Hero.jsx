@@ -1,15 +1,60 @@
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import Magnetic from "./fx/Magnetic";
 
 export default function Hero() {
     const { t } = useTranslation();
+    const sectionRef = useRef(null);
+    const portraitRef = useRef(null);
 
     const scrollToSection = (selector) => (e) => {
         e.preventDefault();
         document.querySelector(selector)?.scrollIntoView({ behavior: "smooth" });
     };
 
+    useEffect(() => {
+        const section = sectionRef.current;
+        const portrait = portraitRef.current;
+        if (
+            !section ||
+            !portrait ||
+            !window.matchMedia("(pointer: fine)").matches ||
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+            return;
+        }
+
+        let frame = 0;
+
+        const onMove = (e) => {
+            const rect = section.getBoundingClientRect();
+            const nx = (e.clientX - rect.left) / rect.width - 0.5;
+            const ny = (e.clientY - rect.top) / rect.height - 0.5;
+
+            cancelAnimationFrame(frame);
+            frame = requestAnimationFrame(() => {
+                portrait.style.transform = `translate3d(${(nx * 16).toFixed(1)}px, ${(ny * 12).toFixed(1)}px, 0)`;
+            });
+        };
+
+        const onLeave = () => {
+            cancelAnimationFrame(frame);
+            portrait.style.transform = "translate3d(0, 0, 0)";
+        };
+
+        section.addEventListener("pointermove", onMove, { passive: true });
+        section.addEventListener("pointerleave", onLeave);
+
+        return () => {
+            section.removeEventListener("pointermove", onMove);
+            section.removeEventListener("pointerleave", onLeave);
+            cancelAnimationFrame(frame);
+        };
+    }, []);
+
     return (
         <section
+            ref={sectionRef}
             id="home"
             className="relative min-h-screen flex items-center justify-center overflow-hidden"
         >
@@ -60,35 +105,54 @@ export default function Hero() {
                         </div>
 
                         <div className="hero-reveal [animation-delay:360ms] flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                            <a
-                                href="#projects"
-                                onClick={scrollToSection("#projects")}
-                                className="px-8 py-3.5 bg-gradient-accent rounded-xl text-white font-medium text-sm hover:shadow-lg hover:shadow-accent-purple/25 transition-all duration-300 hover:-translate-y-0.5"
-                            >
-                                {t("hero.cta.work")}
-                            </a>
-                            <a
-                                href="#contact"
-                                onClick={scrollToSection("#contact")}
-                                className="px-8 py-3.5 rounded-xl text-text-secondary font-medium text-sm border border-white/10 hover:border-white/20 hover:text-white transition-all duration-300 hover:-translate-y-0.5"
-                            >
-                                {t("hero.cta.contact")}
-                            </a>
+                            <Magnetic>
+                                <a
+                                    href="#projects"
+                                    onClick={scrollToSection("#projects")}
+                                    className="group relative px-8 py-3.5 bg-gradient-accent rounded-xl text-white font-medium text-sm overflow-hidden shadow-[0_10px_30px_rgba(124,58,237,0.28)] hover:shadow-[0_16px_44px_rgba(124,58,237,0.42)] transition-all duration-300 hover:-translate-y-0.5"
+                                >
+                                    <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(105deg,transparent_35%,rgba(255,255,255,0.28)_50%,transparent_65%)] -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out" />
+                                    <span className="relative">{t("hero.cta.work")}</span>
+                                </a>
+                            </Magnetic>
+                            <Magnetic>
+                                <a
+                                    href="#contact"
+                                    onClick={scrollToSection("#contact")}
+                                    className="px-8 py-3.5 rounded-xl text-text-secondary font-medium text-sm border border-white/10 bg-white/[0.02] backdrop-blur-sm hover:border-accent-purple/40 hover:text-white hover:shadow-[0_0_28px_rgba(124,58,237,0.18)] transition-all duration-300 hover:-translate-y-0.5"
+                                >
+                                    {t("hero.cta.contact")}
+                                </a>
+                            </Magnetic>
                         </div>
                     </div>
                 </div>
 
                 <div className="hero-reveal [animation-delay:180ms] w-full lg:flex-1 flex justify-center lg:justify-end">
-                    <img
-                        src="/assets/me.png"
-                        alt={`${t("hero.name.first")} ${t("hero.name.last")}`}
-                        width={720}
-                        height={1280}
-                        loading="eager"
-                        decoding="async"
-                        fetchPriority="high"
-                        className="hero-image-float w-[240px] sm:w-[320px] md:w-[360px] lg:w-[420px] xl:w-[500px] max-w-full aspect-square object-cover rounded-full transition-all duration-500"
-                    />
+                    <div
+                        ref={portraitRef}
+                        className="hero-portrait transition-transform duration-500 ease-out"
+                    >
+                        <span aria-hidden="true" className="hero-portrait-glow" />
+                        <span aria-hidden="true" className="hero-portrait-ring hero-portrait-ring--outer" />
+                        <span aria-hidden="true" className="hero-portrait-ring" />
+                        <span aria-hidden="true" className="hero-orbit">
+                            <span className="hero-orbit-dot" />
+                        </span>
+                        <span aria-hidden="true" className="hero-orbit hero-orbit--slow">
+                            <span className="hero-orbit-dot" />
+                        </span>
+                        <img
+                            src="/assets/me.png"
+                            alt={`${t("hero.name.first")} ${t("hero.name.last")}`}
+                            width={720}
+                            height={1280}
+                            loading="eager"
+                            decoding="async"
+                            fetchPriority="high"
+                            className="hero-image-float relative w-[240px] sm:w-[320px] md:w-[360px] lg:w-[420px] xl:w-[500px] max-w-full aspect-square object-cover rounded-full transition-all duration-500"
+                        />
+                    </div>
                 </div>
             </div>
         </section>

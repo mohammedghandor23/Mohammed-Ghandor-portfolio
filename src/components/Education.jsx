@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { GraduationCap, Globe } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import TiltCard from "./fx/TiltCard";
 
 export default function Education() {
     const { t } = useTranslation();
@@ -20,12 +21,16 @@ export default function Education() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-60px" }}
                         transition={{ duration: 0.5 }}
-                        className="glass-card glass-card-hover p-8 relative overflow-hidden"
+                        className="h-full"
+                    >
+                    <TiltCard
+                        tiltMax={5}
+                        className="glass-card gradient-border p-8 relative overflow-hidden h-full"
                     >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-accent-purple/5 rounded-full blur-3xl" />
 
                         <div className="relative">
-                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center mb-6">
+                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center mb-6 shadow-[0_10px_28px_rgba(124,58,237,0.35)]">
                                 <GraduationCap size={26} className="text-white" />
                             </div>
 
@@ -56,6 +61,7 @@ export default function Education() {
                                 </div>
                             </div>
                         </div>
+                    </TiltCard>
                     </motion.div>
 
                     <motion.div
@@ -63,12 +69,16 @@ export default function Education() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-60px" }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="glass-card glass-card-hover p-8 relative overflow-hidden"
+                        className="h-full"
+                    >
+                    <TiltCard
+                        tiltMax={5}
+                        className="glass-card gradient-border p-8 relative overflow-hidden h-full"
                     >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-accent-blue/5 rounded-full blur-3xl" />
 
                         <div className="relative">
-                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center mb-6">
+                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center mb-6 shadow-[0_10px_28px_rgba(59,130,246,0.35)]">
                                 <Globe size={26} className="text-white" />
                             </div>
 
@@ -92,7 +102,7 @@ export default function Education() {
                                             whileInView={{ width: "100%" }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 1, delay: 0.3 }}
-                                            className="h-full bg-gradient-accent rounded-full"
+                                            className="bar-shimmer h-full bg-gradient-accent rounded-full"
                                         />
                                     </div>
                                 </div>
@@ -112,12 +122,13 @@ export default function Education() {
                                             whileInView={{ width: "82%" }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 1, delay: 0.4 }}
-                                            className="h-full bg-gradient-accent rounded-full"
+                                            className="bar-shimmer h-full bg-gradient-accent rounded-full"
                                         />
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </TiltCard>
                     </motion.div>
                 </div>
             </div>

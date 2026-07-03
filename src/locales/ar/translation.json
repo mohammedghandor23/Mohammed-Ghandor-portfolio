@@ -10,6 +10,9 @@
         "screenshot": "لقطة",
         "scrollToTop": "العودة للأعلى"
     },
+    "intro": {
+        "welcome": "أهلاً بك في معرض أعمالي"
+    },
     "navbar": {
         "links": {
             "home": "الرئيسية",

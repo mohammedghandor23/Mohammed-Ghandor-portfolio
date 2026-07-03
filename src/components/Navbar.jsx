@@ -134,6 +134,12 @@ export default function Navbar() {
                         : "backdrop-blur-xl bg-white/[0.03]"
                 }`}
             >
+                <div
+                    aria-hidden="true"
+                    className={`pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent-purple/60 to-transparent transition-opacity duration-500 ${
+                        scrolled ? "opacity-100" : "opacity-0"
+                    }`}
+                />
                 <div className="site-container">
                     <div className="flex items-center justify-between h-16 md:h-20">
                         <a
@@ -165,7 +171,14 @@ export default function Navbar() {
                                         }`}
                                     >
                                         <span
-                                            className={`absolute inset-0 bg-white/5 rounded-lg transition-opacity duration-200 ${
+                                            className={`absolute inset-0 rounded-lg bg-gradient-to-r from-accent-purple/25 to-accent-blue/15 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)] transition-all duration-300 ${
+                                                isActive
+                                                    ? "opacity-100 scale-100"
+                                                    : "opacity-0 scale-90"
+                                            }`}
+                                        />
+                                        <span
+                                            className={`absolute -bottom-0.5 left-1/2 -translate-x-1/2 h-[3px] w-[3px] rounded-full bg-accent-purple shadow-[0_0_8px_rgba(124,58,237,0.9)] transition-all duration-300 ${
                                                 isActive ? "opacity-100" : "opacity-0"
                                             }`}
                                         />

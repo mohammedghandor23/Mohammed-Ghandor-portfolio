@@ -10,6 +10,9 @@
         "screenshot": "screenshot",
         "scrollToTop": "Scroll to top"
     },
+    "intro": {
+        "welcome": "Welcome to my portfolio"
+    },
     "navbar": {
         "links": {
             "home": "Home",

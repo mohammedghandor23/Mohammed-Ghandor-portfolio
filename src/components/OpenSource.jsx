@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ExternalLink, Github } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import ImageSlider from "./ImageSlider";
+import TiltCard from "./fx/TiltCard";
 
 function OpenSourceCard({ project, index, reversed, t }) {
     return (
@@ -11,7 +12,10 @@ function OpenSourceCard({ project, index, reversed, t }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="glass-card p-6 md:p-8 lg:p-10"
+        >
+        <TiltCard
+            tiltMax={0}
+            className="glass-card gradient-border p-6 md:p-8 lg:p-10"
         >
             <div
                 className={`flex flex-col ${
@@ -40,7 +44,7 @@ function OpenSourceCard({ project, index, reversed, t }) {
                         {project.tech.map((tech) => (
                             <span
                                 key={tech}
-                                className="px-3 py-1.5 text-xs font-medium text-text-secondary bg-white/5 rounded-lg border border-white/5"
+                                className="px-3 py-1.5 text-xs font-medium text-text-secondary bg-white/5 rounded-lg border border-white/5 transition-colors duration-300 hover:text-white hover:border-accent-purple/40 hover:bg-accent-purple/10"
                             >
                                 {tech}
                             </span>
@@ -53,7 +57,7 @@ function OpenSourceCard({ project, index, reversed, t }) {
                                 href={project.githubLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/5 hover:bg-white/10 rounded-lg text-sm font-medium text-white border border-white/10 hover:border-white/20 transition-all"
+                                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/5 hover:bg-white/10 rounded-lg text-sm font-medium text-white border border-white/10 hover:border-accent-purple/40 hover:shadow-[0_8px_24px_rgba(124,58,237,0.18)] hover:-translate-y-0.5 transition-all duration-300"
                             >
                                 <Github size={16} />
                                 {t("opensource.github")}
@@ -64,7 +68,7 @@ function OpenSourceCard({ project, index, reversed, t }) {
                                 href={project.pubLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/5 hover:bg-white/10 rounded-lg text-sm font-medium text-white border border-white/10 hover:border-white/20 transition-all"
+                                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/5 hover:bg-white/10 rounded-lg text-sm font-medium text-white border border-white/10 hover:border-accent-purple/40 hover:shadow-[0_8px_24px_rgba(124,58,237,0.18)] hover:-translate-y-0.5 transition-all duration-300"
                             >
                                 <ExternalLink size={16} />
                                 {t("opensource.pub")}
@@ -77,6 +81,7 @@ function OpenSourceCard({ project, index, reversed, t }) {
                     <ImageSlider images={project.images} alt={project.title} />
                 </div>
             </div>
+        </TiltCard>
         </motion.div>
     );
 }

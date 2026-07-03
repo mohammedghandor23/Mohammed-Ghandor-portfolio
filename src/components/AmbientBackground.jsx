@@ -39,6 +39,23 @@ const blobs = [
     },
 ];
 
+const particles = Array.from({ length: 14 }, (_, i) => {
+    const seed = (i * 2654435761) % 1000;
+    const rand = (offset) => (((seed + offset * 337) % 997) / 997);
+
+    return {
+        id: i,
+        left: `${(rand(1) * 96 + 2).toFixed(2)}%`,
+        top: `${(rand(2) * 92 + 4).toFixed(2)}%`,
+        size: 1.5 + rand(3) * 2.5,
+        duration: 12 + rand(4) * 16,
+        delay: -rand(5) * 20,
+        driftX: (rand(6) - 0.5) * 70,
+        driftY: -(20 + rand(7) * 70),
+        opacity: 0.2 + rand(8) * 0.45,
+    };
+});
+
 export default function AmbientBackground() {
     return (
         <div
@@ -46,6 +63,8 @@ export default function AmbientBackground() {
             className="fixed inset-0 z-0 pointer-events-none overflow-hidden"
         >
             <div className="absolute inset-0 bg-primary" />
+
+            <div className="fx-aurora" />
 
             <div
                 className="absolute inset-0 opacity-75"
@@ -60,8 +79,8 @@ export default function AmbientBackground() {
             {blobs.map((blob) => (
                 <motion.div
                     key={blob.id}
-                    className={`absolute rounded-full blur-[130px] ${blob.className}`}
-                    style={{ background: blob.color }}
+                    className={`absolute rounded-full blur-[100px] ${blob.className}`}
+                    style={{ background: blob.color, willChange: "transform" }}
                     animate={{
                         x: [0, blob.x, -blob.x * 0.5, 0],
                         y: [0, blob.y, -blob.y * 0.4, 0],
@@ -71,6 +90,24 @@ export default function AmbientBackground() {
                         duration: blob.duration,
                         repeat: Infinity,
                         ease: "easeInOut",
+                    }}
+                />
+            ))}
+
+            {particles.map((p) => (
+                <span
+                    key={p.id}
+                    className="fx-particle"
+                    style={{
+                        left: p.left,
+                        top: p.top,
+                        width: `${p.size}px`,
+                        height: `${p.size}px`,
+                        "--drift-duration": `${p.duration.toFixed(1)}s`,
+                        "--drift-delay": `${p.delay.toFixed(1)}s`,
+                        "--drift-x": `${p.driftX.toFixed(0)}px`,
+                        "--drift-y": `${p.driftY.toFixed(0)}px`,
+                        "--drift-opacity": p.opacity.toFixed(2),
                     }}
                 />
             ))}

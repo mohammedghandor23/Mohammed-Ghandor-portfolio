@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import TiltCard from "./fx/TiltCard";
+import Magnetic from "./fx/Magnetic";
 
 const PHONE_LINK = "tel:+963980895956";
 
@@ -100,26 +102,31 @@ export default function Contact() {
                                 </p>
 
                                 <div className="mt-auto pt-7 flex flex-col sm:flex-row lg:flex-col gap-3">
-                                    <motion.a
-                                        href={gmailLink}
-                                        onClick={handleSendEmail}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.02, y: -1 }}
-                                        whileTap={{ scale: 0.98 }}
-                                        className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-accent rounded-xl text-white text-sm font-medium hover:shadow-lg hover:shadow-accent-purple/25 transition-all duration-300"
-                                    >
-                                        <Send size={16} />
-                                        {t("contact.openGmail")}
-                                    </motion.a>
+                                    <Magnetic className="w-full">
+                                        <motion.a
+                                            href={gmailLink}
+                                            onClick={handleSendEmail}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            whileHover={{ scale: 1.02, y: -1 }}
+                                            whileTap={{ scale: 0.98 }}
+                                            className="group relative w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-accent rounded-xl text-white text-sm font-medium overflow-hidden shadow-[0_10px_28px_rgba(124,58,237,0.28)] hover:shadow-[0_16px_40px_rgba(124,58,237,0.42)] transition-all duration-300"
+                                        >
+                                            <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(105deg,transparent_35%,rgba(255,255,255,0.28)_50%,transparent_65%)] -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out" />
+                                            <Send size={16} />
+                                            {t("contact.openGmail")}
+                                        </motion.a>
+                                    </Magnetic>
 
-                                    <a
-                                        href={PHONE_LINK}
-                                        className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-white/10 text-text-secondary text-sm font-medium hover:border-white/20 hover:text-white transition-all duration-300"
-                                    >
-                                        <Phone size={16} />
-                                        {t("contact.callNow")}
-                                    </a>
+                                    <Magnetic className="w-full">
+                                        <a
+                                            href={PHONE_LINK}
+                                            className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-white/10 bg-white/[0.02] text-text-secondary text-sm font-medium hover:border-accent-purple/40 hover:text-white hover:shadow-[0_0_24px_rgba(124,58,237,0.16)] transition-all duration-300"
+                                        >
+                                            <Phone size={16} />
+                                            {t("contact.callNow")}
+                                        </a>
+                                    </Magnetic>
                                 </div>
                             </motion.div>
 
@@ -135,7 +142,11 @@ export default function Contact() {
                                                 duration: 0.45,
                                                 delay: i * 0.08,
                                             }}
-                                            className={`group relative rounded-2xl border border-white/10 bg-white/[0.02] p-5 md:p-6 overflow-hidden ${item.cardClass || ""}`}
+                                            className={item.cardClass || ""}
+                                        >
+                                        <TiltCard
+                                            tiltMax={5}
+                                            className="group relative h-full rounded-2xl border border-white/10 bg-white/[0.02] p-5 md:p-6 overflow-hidden transition-colors duration-300 hover:border-accent-purple/30"
                                         >
                                             <div
                                                 className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${item.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
@@ -166,6 +177,7 @@ export default function Contact() {
                                                     </p>
                                                 )}
                                             </div>
+                                        </TiltCard>
                                         </motion.div>
                                     ))}
                                 </div>
